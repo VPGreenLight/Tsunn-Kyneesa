@@ -1,0 +1,43 @@
+:root {
+  /* Warm Romantic Palette (Thơ Mộng & Tinh Tế) */
+  --bg-deep: #08060d;
+  --bg-velvet: #110d19;
+  
+  /* Frosted Glass Layers */
+  --glass-surface: rgba(17, 13, 25, 0.6);
+  --glass-surface-hover: rgba(26, 20, 38, 0.72);
+  --glass-card: rgba(255, 255, 255, 0.035);
+  --glass-card-hover: rgba(255, 255, 255, 0.065);
+
+  /* Delicate Light Borders */
+  --glass-border: rgba(255, 255, 255, 0.07);
+  --glass-border-top: rgba(255, 255, 255, 0.16);
+  --glass-border-hover: rgba(243, 206, 122, 0.35);
+
+  /* Subtle Warm Shadows & Inset Highlights */
+  --glass-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.65);
+  --glass-inset: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  --warm-glow: 0 0 35px rgba(224, 122, 143, 0.18);
+
+  /* Refined Accent Hues */
+  --primary-rose: #e2738a;
+  --primary-rose-soft: #f29db0;
+  --accent-gold: #f3ce7a;
+  --accent-gold-soft: #fdf2d0;
+  --accent-candle: #ffb703;
+  --accent-lavender: #bfa2db;
+
+  /* Editorial Text System */
+  --text-main: #fdfaf7;
+  --text-muted: #a39ea8;
+  --text-dim: #6d6775;
+  --text-highlight: #ffeff3;
+
+  /* Typography */
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-romantic: 'Caveat', cursive;
+
+  /* Blur settings */
+  --blur-crystal: blur(20px) saturate(150%);
+}

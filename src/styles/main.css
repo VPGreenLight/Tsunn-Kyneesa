@@ -1,0 +1,455 @@
+@import './tokens.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  overflow-x: hidden;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(226, 115, 138, 0.25);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(226, 115, 138, 0.5);
+}
+
+/* Handcrafted Frosted Crystal Glass Panel */
+.glass-panel {
+  background: var(--glass-surface);
+  backdrop-filter: var(--blur-crystal);
+  -webkit-backdrop-filter: var(--blur-crystal);
+  border: 1px solid var(--glass-border);
+  border-top: 1px solid var(--glass-border-top);
+  box-shadow: var(--glass-shadow), var(--glass-inset);
+  border-radius: 24px;
+  transition: border-color 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+}
+
+.glass-panel:hover {
+  border-color: var(--glass-border-hover);
+  box-shadow: var(--glass-shadow), var(--warm-glow), var(--glass-inset);
+}
+
+/* Delicate Glass Card */
+.glass-card {
+  background: var(--glass-card);
+  backdrop-filter: var(--blur-crystal);
+  -webkit-backdrop-filter: var(--blur-crystal);
+  border: 1px solid var(--glass-border);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 25px -8px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 1.5rem;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  background: var(--glass-card-hover);
+  border-color: rgba(243, 206, 122, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+/* Refined Romantic Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-rose) 0%, #c44e66 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  box-shadow: 0 8px 20px -4px rgba(226, 115, 138, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  letter-spacing: 0.01em;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -4px rgba(226, 115, 138, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, #e78298 0%, #ce556e 100%);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-main);
+  border: 1px solid var(--glass-border);
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: var(--blur-crystal);
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(243, 206, 122, 0.4);
+  color: var(--accent-gold-soft);
+  transform: translateY(-2px);
+}
+
+/* Typography Helpers */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-romantic {
+  font-family: var(--font-romantic);
+}
+
+/* Animations */
+@keyframes heartPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.animate-heart-pulse {
+  animation: heartPulse 2.8s infinite ease-in-out;
+}
+
+/* ==========================================================================
+   MOBILE & RESPONSIVE DESIGN ENHANCEMENTS
+   ========================================================================== */
+
+/* Prevent horizontal blowout */
+html, body, #root {
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+}
+
+.main-content {
+  position: relative;
+  z-index: 10;
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 1.5rem auto 0 auto;
+  padding: 0 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin: 1rem auto 0 auto;
+    padding: 0 0.85rem;
+  }
+}
+
+/* Responsive Navbar */
+.nav-header {
+  position: sticky;
+  top: 18px;
+  z-index: 50;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 1.25rem;
+}
+
+.nav-box {
+  display: flex;
+  align-items: center;
+  justifyContent: space-between;
+  padding: 0.65rem 1.25rem;
+  border-radius: 999px;
+  gap: 0.75rem;
+}
+
+.nav-top-row {
+  display: contents;
+}
+
+.nav-brand {
+  order: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.nav-dock {
+  order: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nav-action {
+  order: 3;
+}
+
+@media (max-width: 900px) {
+  .nav-header {
+    top: 8px;
+    padding: 0 0.6rem;
+  }
+  .nav-box {
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 0.65rem 0.85rem;
+    gap: 0.5rem;
+  }
+  .nav-top-row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-dock {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0.2rem 0;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+  }
+  .nav-dock::-webkit-scrollbar {
+    display: none;
+  }
+  .nav-dock button {
+    flex-shrink: 0;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Responsive Dashboard Hero */
+.dashboard-hero {
+  padding: 3.5rem 2.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 50% 120%, rgba(226, 115, 138, 0.14) 0%, rgba(17, 13, 25, 0.65) 75%);
+}
+
+.dashboard-title {
+  font-size: clamp(2rem, 6vw, 3.6rem);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+  color: var(--text-main);
+  word-break: break-word;
+}
+
+.dashboard-time-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 0.6rem 1.5rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  margin: 0.5rem auto 1.5rem auto;
+  font-size: 0.92rem;
+  color: var(--accent-gold-soft);
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .dashboard-hero {
+    padding: 2rem 1.2rem;
+    border-radius: 20px;
+  }
+  .dashboard-time-pill {
+    padding: 0.6rem 1rem;
+    font-size: 0.82rem;
+    gap: 0.6rem;
+    border-radius: 16px;
+  }
+}
+
+.dashboard-quote {
+  font-size: clamp(1.3rem, 4.5vw, 1.9rem);
+  color: var(--text-highlight);
+  max-width: 680px;
+  margin: 0.5rem auto 2rem auto;
+  line-height: 1.45;
+}
+
+/* Dashboard 2-column Grid -> 1 column on mobile */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 1.75rem;
+  align-items: start;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+/* Baby names grid */
+.baby-names-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .baby-names-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
+
+/* Streak badges grid */
+.streak-badges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 0.65rem;
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .streak-badges-grid {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    gap: 0.45rem;
+  }
+}
+
+/* Moveset Floating Bar */
+.moveset-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(17, 13, 25, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  max-width: calc(100vw - 32px);
+}
+
+@media (max-width: 768px) {
+  .moveset-container {
+    bottom: 12px;
+    right: 12px;
+    left: 12px;
+    justify-content: center;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding: 0.4rem 0.6rem;
+  }
+  .moveset-container::-webkit-scrollbar {
+    display: none;
+  }
+  .moveset-label {
+    display: none;
+  }
+}
+
+/* Timeline Responsive adjustments */
+.timeline-track-wrap {
+  position: relative;
+  padding-left: 2rem;
+}
+
+@media (max-width: 600px) {
+  .timeline-track-wrap {
+    padding-left: 1.5rem;
+  }
+}
+
+/* Card & Map Grids */
+.responsive-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr));
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.map-layout-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+@media (max-width: 850px) {
+  .map-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+/* Typing Dots Animation for Messenger */
+.typing-dots {
+  display: inline-flex;
+  gap: 2px;
+  font-weight: bold;
+}
+
+.typing-dots span {
+  animation: typingBlink 1.4s infinite ease-in-out both;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.typing-dots span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.typing-dots span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes typingBlink {
+  0%, 80%, 100% {
+    opacity: 0.2;
+    transform: translateY(0);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(-3px);
+  }
+}
+

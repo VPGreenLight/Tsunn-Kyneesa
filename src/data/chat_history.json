@@ -1,0 +1,91 @@
+[
+  {
+    "id": "init-1",
+    "senderId": "tsunn",
+    "senderName": "Xuân (Tsunn) ❤️",
+    "text": "Anh yêu ơi! Hôm nay của anh thế nào rồi? Có nhớ em một chút nào không đó? 🥺",
+    "timestamp": "22:15",
+    "createdAt": 1791562650565,
+    "seen": true,
+    "reactions": {
+      "❤️": [
+        "kyneesa"
+      ]
+    }
+  },
+  {
+    "id": "init-2",
+    "senderId": "kyneesa",
+    "senderName": "Kyneesa",
+    "text": "Nhớ em cả ngày luôn nè, bận mấy cũng phải vào không gian của hai đứa mình nhắn cho em!",
+    "timestamp": "22:18",
+    "createdAt": 1791562850565,
+    "seen": true,
+    "reactions": {
+      "🥰": [
+        "tsunn"
+      ]
+    }
+  },
+  {
+    "id": "init-3",
+    "senderId": "tsunn",
+    "senderName": "Xuân (Tsunn) ❤️",
+    "text": "Hí hí dẻo miệng quá nha! Từ giờ hai đứa mình có thể nhắn tin trực tiếp qua đây như Messenger rồi nè moah moah 💕",
+    "timestamp": "22:20",
+    "createdAt": 1791563050565,
+    "seen": true,
+    "reactions": {
+      "🔥": [
+        "kyneesa"
+      ]
+    }
+  },
+  {
+    "id": "msg-1791566539528-cu1lw",
+    "senderId": "kyneesa",
+    "senderName": "Kyneesa",
+    "text": "Anh yAnh yeu em nhieu lam!",
+    "timestamp": "00:22",
+    "createdAt": 1791566539528,
+    "seen": true,
+    "reactions": {}
+  },
+  {
+    "id": "msg-1791566551958-l0e5p",
+    "senderId": "kyneesa",
+    "senderName": "Kyneesa",
+    "text": "Anh nhớ em nhiều lắm! 💕",
+    "timestamp": "00:22",
+    "createdAt": 1791566551958,
+    "seen": true,
+    "reactions": {
+      "🥰": [
+        "kyneesa"
+      ],
+      "❤️": [
+        "tsunn"
+      ]
+    }
+  },
+  {
+    "id": "msg-1791566565196-qj960",
+    "senderId": "kyneesa",
+    "senderName": "Kyneesa",
+    "text": "❤️",
+    "timestamp": "00:22",
+    "createdAt": 1791566565196,
+    "seen": true,
+    "reactions": {}
+  },
+  {
+    "id": "msg-1791566709591-84plh",
+    "senderId": "tsunn",
+    "senderName": "Xuân (Tsunn) ❤️",
+    "text": "Anh nhớ em nhiều lắm! 💕",
+    "timestamp": "00:25",
+    "createdAt": 1791566709591,
+    "seen": true,
+    "reactions": {}
+  }
+]
